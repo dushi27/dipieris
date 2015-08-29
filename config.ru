@@ -1,7 +1,8 @@
-require 'rubygems'
-require 'bundler'
+require 'sinatra'
+require 'sass/plugin/rack'
+require './app'
 
-Bundler.require
+Sass::Plugin.options[:style] = :compressed
+use Sass::Plugin::Rack
 
-require './app.rb'
 run Sinatra::Application
