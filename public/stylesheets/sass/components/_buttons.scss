@@ -1,3 +1,13 @@
+//badges
+.badge {
+  border:2px solid black;
+  color:black;
+  height:auto;
+  width:auto;
+  padding:6px;
+  border-radius:10px;
+}
+
 // shared styles
 .btn, .btn-flat {
   border: none;
@@ -154,4 +164,17 @@ button.btn-floating {
 // Block button
 .btn-block {
   display: block;
+}
+
+// Comic button
+
+.comic-btn {
+  background:white;
+  color:black;
+  border:2px solid black;
+  border-radius:10px;
+  padding: 0.75em;
+  @extend .waves-effect; 
+  @extend .waves-light;
+  @extend .z-depth-1;
 }

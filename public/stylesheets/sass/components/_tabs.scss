@@ -1,7 +1,7 @@
 .tabs {
   position: relative;
   height: 48px;
-  background-color: $tabs-bg-color;
+  background-color: $di-black;
   margin: 0 auto;
   width: 100%;
   white-space: nowrap;
@@ -19,18 +19,19 @@
     width: 15%;
 
     a {
-      color: $tabs-text-color;
+      color: $di-white;
       display: block;
       width: 100%;
       height: 100%;
+      font-weight: bold;
       @include transition( color .28s ease);
       &:hover {
-        color: lighten($tabs-text-color, 20%);
+        color: $di-brown;
       }
     }
 
     &.disabled a {
-      color: lighten($tabs-text-color, 20%);
+      color: lighten($di-blue, 20%);
       cursor: default;
     }
   }
@@ -38,7 +39,7 @@
     position: absolute;
     bottom: 0;
     height: 2px;
-    background-color: $tabs-underline-color;
+    background-color: $di-white;
     will-change: left, right;
   }
 }

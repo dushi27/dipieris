@@ -21,7 +21,7 @@
 
   .card-title {
     color: $card-bg-color;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     &.activator {
       cursor: pointer;
@@ -99,7 +99,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: $card-padding;
+      padding: 0;
     }
 
   }
