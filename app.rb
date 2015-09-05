@@ -13,7 +13,7 @@ end
 get '/works' do
   #response = Unirest.get('https://api.github.com/user/repos?access_token=ENV['TOKEN'])
   base = 'https://api.github.com/'
-  token = "?access_token=#{ENV['TOKEN']}"
+  token = "?access_token=#{ENV['GIT_TOKEN']}"
   commits_by_repos = []
   @weekly_commits = []
   repos = Unirest.get("#{base}user/repos#{token}")
@@ -21,7 +21,7 @@ get '/works' do
   repos.body.each do |r|
       langs = r['language'] ||= 'Other'
       if @languages.has_key? langs 
-          @languages[langs].to_i += 1
+          @languages[langs] += 1
       else
           @languages[langs]  = 1
       end
