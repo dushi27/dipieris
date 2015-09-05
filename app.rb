@@ -16,18 +16,20 @@ get '/works' do
   token = "?access_token=#{ENV['TOKEN']}"
   commits_by_repos = []
   @weekly_commits = []
-  @languages = {}
-  @page_class = 'works'
   repos = Unirest.get("#{base}user/repos#{token}")
+  @languages = {}
   repos.body.each do |r|
       langs = r['language'] ||= 'Other'
       if @languages.has_key? langs 
-          @languages[langs] += 1
+          @languages[langs].to_i += 1
       else
           @languages[langs]  = 1
       end
   end
+  @page_class = 'works'
   @num_repos = @languages.values.inject { |a, b| a + b }
+  
+
   
   repos = Unirest.get("#{base}user/repos#{token}")
   
