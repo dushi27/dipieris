@@ -52,7 +52,13 @@
   content: "y";
 }
 
-
 .icon-hover {
   border-bottom:2px solid #039BE5;
+}
+
+//icons
+.icon {
+  &:hover {
+    @extend .z-depth-2;
+  }
 }
