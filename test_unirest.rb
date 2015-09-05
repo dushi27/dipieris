@@ -1,6 +1,7 @@
 require 'unirest'
+GIT_TOKEN = ''
 =begin
-response = Unirest.get('https://api.github.com/users/dushi27/events/public?access_token=86a9ffa4df56622c77b309807ec3c2409cc9344e')
+response = Unirest.get('https://api.github.com/users/dushi27/events/public?access_token=GIT_TOKEN')
 i = 0
 response.body.each do |r|
     #puts "#{i} #{r['type']}"
@@ -9,7 +10,7 @@ response.body.each do |r|
 
 
 base = 'https://api.github.com/'
-token = "?access_token=ENV['GIT_TOKEN']"
+token = "?access_token=GIT_TOKEN"
 commits_by_repos = []
 weekly_commits = []
 

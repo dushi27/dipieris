@@ -11,13 +11,14 @@ get '/about' do
 end
 
 get '/works' do
-  #response = Unirest.get('https://api.github.com/user/repos?access_token=ENV['GIT_TOKEN'])
+  #response = Unirest.get('https://api.github.com/user/repos?access_token=ENV['TOKEN'])
   base = 'https://api.github.com/'
-  token = "?access_token=ENV['GIT_TOKEN']"
+  token = "?access_token=#{ENV['TOKEN']}"
   commits_by_repos = []
   @weekly_commits = []
-  repos = Unirest.get("#{base}user/repos#{token}")
   @languages = {}
+  @page_class = 'works'
+  repos = Unirest.get("#{base}user/repos#{token}")
   repos.body.each do |r|
       langs = r['language'] ||= 'Other'
       if @languages.has_key? langs 
@@ -26,10 +27,7 @@ get '/works' do
           @languages[langs]  = 1
       end
   end
-  @page_class = 'works'
   @num_repos = @languages.values.inject { |a, b| a + b }
-  
-
   
   repos = Unirest.get("#{base}user/repos#{token}")
   
