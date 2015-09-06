@@ -51,15 +51,18 @@ body {
 #navbar {
   position:fixed;
   display:inline;
-  bottom:0;
-  width:100%;
+  bottom:25px;
+  right:0;
   height:50px;
   background-color: #039be5;
   margin-bottom:0;
+  border-radius: 5px 0 0 5px;
   @extend .row;
   @extend .center;
+  @extend .z-depth-2;
   a {
-    width:33%;
+    @extend .col;
+    @extend .s12;
     text-align:middle;
     height:50px;
     font-size:28px;
@@ -67,7 +70,7 @@ body {
     &:hover {
       //border-bottom:3px solid white;
       //border-top:3px solid white;
-      @extend .z-depth-3
+      @extend .z-depth-4;
     }
     &:target {
       border:3px solid white;

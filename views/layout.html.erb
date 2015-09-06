@@ -12,9 +12,12 @@
     <script src="js/bin/chartkick.js"></script>
   </head>
   <body class='<%=@page_class%>' id='#yourMainContainer'>
-    <div id='navbar'>
-      <a href='/' class='col s6 waves-effect wave-light'>Home</a>
-      <a href='/works' class='col s6 waves-effect wave-light'>Projects</a>
+    <div id='navbar' class= 'col s8 m6 l7'>
+      <%if @page_class == 'works'%>
+        <a href='/' class='waves-effect wave-light'>Home</a>
+      <%elsif @page_class == 'home'%>
+        <a href='/works' class='waves-effect wave-light'>Projects</a>
+      <%end%>
     </div>
     <%= yield %>
     <!--Import jQuery before materialize.js-->
