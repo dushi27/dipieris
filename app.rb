@@ -11,7 +11,6 @@ get '/about' do
 end
 
 get '/works' do
-  ENV['GIT_TOKEN'] ||= '86a9ffa4df56622c77b309807ec3c2409cc9344e'
   #response = Unirest.get('https://api.github.com/user/repos?access_token=ENV['TOKEN'])
   base = 'https://api.github.com/'
   token = "?access_token=#{ENV['GIT_TOKEN']}"
