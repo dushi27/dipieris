@@ -1,36 +1,38 @@
-<div class='row center valign-wrapper'>
-  <!--Left side-->
-  <div class='col s12 m6 l7 wrap center' id="safeme" style='height:92%;text-align: center;margin:0;padding:0;'>
-    <!--Safeme-->
-    <div style='height:52%;border:4px solid black;'>
-      <h2>SafeMe</h2>
-      <p>Safeme is a platform for using wearable devices to empower bystander intervention.</p>
-      <a href='//safeme.herokuapp.com' target='_blank' class='comic-btn'>Visit the Website</a>
-      <a href='//dushi27.github.io/safeme' class='comic-btn' target='_blank'>View Source</a>
-      <p style='margin-bottom:0;'>Skills:</p>
-      <p style='font-size:1.2rem;'>Ruby on Rails/ postgresql / Heroku / Twilio/ PubSub/ Jawbone API / OAuth</>
+<div class=' center '>
+  <div class='row'>
+    <!--Left side-->
+    <div class='col s12 m6 l7 wrap center' id="safeme" style='height:92%;text-align: center;margin:0;padding:0;'>
+      <!--Safeme-->
+      <div style='height:50%;border:4px solid black;'>
+        <h2>SafeMe</h2>
+        <p>Safeme is a platform for using wearable devices to empower bystander intervention.</p>
+        <a href='//safeme.herokuapp.com' target='_blank' class='comic-btn'>Visit the Website</a>
+        <a href='//dushi27.github.io/safeme' class='comic-btn' target='_blank'>View Source</a>
+        <p style='margin-bottom:0;'>Skills:</p>
+        <p style='font-size:1.2rem;margin-top:0;'>Ruby on Rails/ postgresql / Heroku / Twilio/ PubSub/ Jawbone API / OAuth</>
+      </div>
+      <!--Github-->
+      <div style='height:50%; border:4px solid black;'>
+         <h2>Bookz</h2>
+        <p>E-commerce bookstore offering a store front, admin portal and a product API.</p>
+        <a href='//bookzapp.herokuapp.com' target='_blank' class='comic-btn' >Visit the Website</a>
+        <a href='//dushi27.github.io/depot' class='comic-btn' target='_blank'>View Source</a>
+        <p style='margin-bottom:0;'>Skills:</p>
+        <p style='font-size:1.2rem;margin-top:0;'>Ruby/ Google Analytics/ Mendrill Email Infrastructure</p>
+      </div>
     </div>
-    <!--Github-->
-    <div style='height:44%; border-bottom:4px solid black;'>
-       <h2>Bookz</h2>
-      <p>Bookz is a demo e-commerce bookstore. Apart from the customer view, the app offers an Admin portal and product API.</p>
-      <a href='//bookzapp.herokuapp.com' target='_blank' class='comic-btn' >Visit the Website</a>
-      <a href='//dushi27.github.io/depot' class='comic-btn' target='_blank'>View Source</a>
-      <p style='margin-bottom:0;'>Skills:</p>
-      <p style='font-size:1.2rem;'>Ruby/ Google Analytics/ Mendrill Email Infrastructure</p>
-    </div>
-  </div>
-  
-  <!--Right side-->
-  <div class='col s12 m6 l5' style='padding:0;height:92%;border:4px solid black;'>
-    <!--GitHub-->
-    <h3 class='center'>GitHub Stats</h3>
-    <a href='//github.com/dushi27' target='_blank' class='comic-btn center' style='clear:both;margin-bottom:5px;'>Visit GitHub Profile</a>
-    <p><%=@number_commits%> commits in the past four weeks</p>
-    <p style="font-size:1.2rem;"><%=@num_repos%> GitHub Repos by Programming Lanugage</p>
-    <div style = 'clear:both; margin-top:2px;'>
-      <%line_chart @commits%>
-      <%= pie_chart @languages,colors: [ '#38bcfc', '#026899', "#039be5", '#03c1e5']%>
+    
+    <!--Right side-->
+    <div class='col s12 m6 l5 center' style='padding:0;height:92%;border:4px solid black;'>
+      <!--GitHub-->
+      <h3 class='center'>GitHub Stats</h3>
+      <a href='//github.com/dushi27' target='_blank' class='comic-btn center' style='clear:both;margin-bottom:5px;'>Visit GitHub Profile</a>
+      <p><%=@number_commits%> commits in the past four weeks</p>
+      <p style="font-size:1.2rem;"><%=@num_repos%> GitHub Repos by Programming Lanugage</p>
+      <div style = 'clear:both; margin-top:2px;'>
+        <%line_chart @commits%>
+        <%= pie_chart @languages,colors: [ '#38bcfc', '#026899', "#039be5", '#03c1e5']%>
+      </div>
     </div>
   </div>
 </div>
