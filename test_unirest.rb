@@ -1,14 +1,10 @@
 require 'unirest'
 GIT_TOKEN = ''
+
+response = Unirest.get('https://api.github.com/users/dushi27/events/public?access_token=')
+puts response.headers 
+
 =begin
-response = Unirest.get('https://api.github.com/users/dushi27/events/public?access_token=GIT_TOKEN')
-i = 0
-response.body.each do |r|
-    #puts "#{i} #{r['type']}"
-    i+=1
-=end
-
-
 base = 'https://api.github.com/'
 token = "?access_token=GIT_TOKEN"
 commits_by_repos = []
@@ -27,4 +23,4 @@ end
 
 commits_by_repos.transpose.each do |repo|
   weekly_commits << repo.inject{|sum,x| sum + x }
-end
+=end

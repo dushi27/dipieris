@@ -1,9 +1,8 @@
 <!DOCTYPE>
 <html>
   <head>
-    <title>Dushyanthi</title>
+    <title>Dushyanthi Pieris</title>
     <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css"></link>
-    <link href="/stylesheets/bookblock.css" rel="stylesheet" type="text/css"></link>
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,121 +22,5 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/bin/materialize.min.js"></script>
-    <script type="text/javascript" src="js/bin/bookblock.js"></script>
-    <script type="text/javascript"> 
-  $(document).ready(function() {
-    
-  //JS from the demo
-  var Page = (function() {
-  				
-  				var config = {
-  						$bookBlock : $( '#bb-bookblock' ),
-  						$navNext : $( '#bb-nav-next' ),
-  						$navPrev : $( '#bb-nav-prev' ),
-  						$navFirst : $( '#bb-nav-first' ),
-  						$navLast : $( '#bb-nav-last' )
-  					},
-  					init = function() {
-  						config.$bookBlock.bookblock( {
-  							speed : 800,
-  							shadowSides : 0.8,
-  							shadowFlip : 0.7
-  						} );
-  						initEvents();
-  					},
-  					initEvents = function() {
-  						
-  						var $slides = config.$bookBlock.children();
-  
-  						// add navigation events
-  						config.$navNext.on( 'click touchstart', function() {
-  							config.$bookBlock.bookblock( 'next' );
-  							return false;
-  						} );
-  
-  						config.$navPrev.on( 'click touchstart', function() {
-  							config.$bookBlock.bookblock( 'prev' );
-  							return false;
-  						} );
-  
-  						config.$navFirst.on( 'click touchstart', function() {
-  							config.$bookBlock.bookblock( 'first' );
-  							return false;
-  						} );
-  
-  						config.$navLast.on( 'click touchstart', function() {
-  							config.$bookBlock.bookblock( 'last' );
-  							return false;
-  						} );
-  						
-  						// add swipe events
-  						$slides.on( {
-  							'swipeleft' : function( event ) {
-  								config.$bookBlock.bookblock( 'next' );
-  								return false;
-  							},
-  							'swiperight' : function( event ) {
-  								config.$bookBlock.bookblock( 'prev' );
-  								return false;
-  							}
-  						} );
-  
-  						// add keyboard events
-  						$( document ).keydown( function(e) {
-  							var keyCode = e.keyCode || e.which,
-  								arrow = {
-  									left : 37,
-  									up : 38,
-  									right : 39,
-  									down : 40
-  								};
-  
-  							switch (keyCode) {
-  								case arrow.left:
-  									config.$bookBlock.bookblock( 'prev' );
-  									break;
-  								case arrow.right:
-  									config.$bookBlock.bookblock( 'next' );
-  									break;
-  							}
-  						} );
-  					};
-  
-  					return { init : init };
-  
-  			})();
-    Page.init();
-    $('#alternativesbar').click(function(){
-      $('#alternativesbar').removeClass('hide');
-      $('#bookzbar').addClass('hide');
-      $('#safemebar').addClass('hide');
-    });
-    
-    $('#bookzbar').click(function(){
-      $('#alternativesbar').addClass('hide');
-      $('#bookzbar').removeClass('hide');
-      $('#safemebar').addClass('hide');
-    });
-    
-    $('#safemebar').click(function(){
-      $('#alternativesbar').addClass('hide');
-      $('#bookzbar').addClass('hide');
-      $('#safemebar').removeClass('hide');
-    });
-  });
-  
-</script>
   </body>
 </html>
-<!--      <script>
-        $(document).ready(function(){
-    $(window).resize();
-});
-$(window).resize(function{
-    // your code
-    var windowWidth=$(window).width();
-    var mainContainerWidth=windowWidth-100; // For example
-    $("#yourMainContainer").css({"width":mainContainerWidth+"px"});
-});
-      </script>-->
-
