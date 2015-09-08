@@ -4,3 +4,4 @@ $( document ).ready(function() {
     $('#githubstats').effect('slide', { direction: "right" }, 'slow');
     $('#bookz').effect('slide', 'slow');
 });
+
