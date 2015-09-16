@@ -11,6 +11,7 @@ get '/about' do
 end
 
 get '/works' do
+  ENV['GIT_TOKEN'] ||= '64262e2be8f80d5263dcf3716bdb2c6377b3a394'
   @page_class = 'works'
   base = 'https://api.github.com/'
   token = "?access_token=#{ENV['GIT_TOKEN']}"
